@@ -11,7 +11,7 @@ const Pagination = ({ movies, postPerPage, setCurrentPage, currentPage }) => {
         <div className="pagination">
             {
                 pages.map((page, index) =>
-                (<button key={index} className={page == currentPage ? "btn btn_active" : "btn"}
+                (<button key={index} className={page === currentPage ? "btn btn_active" : "btn"}
                     onClick={() => setCurrentPage(page)}>
                     {page}
                 </button>))

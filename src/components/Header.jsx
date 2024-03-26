@@ -1,7 +1,4 @@
 import React from "react";
-import style from '../components_style/style.css';
-import SearchMovie from "./SearchMovie";
-
 
 const Header = ({ searchValue, setSearchValue }) => {
     return (
@@ -10,7 +7,7 @@ const Header = ({ searchValue, setSearchValue }) => {
             <input className="search"
                 placeholder="Поиск"
                 onKeyDown={(event) => {
-                    if (event.keyCode == 13) {
+                    if (event.keyCode === 13) {
                         setSearchValue(event.target.value)
                     }
                 }}

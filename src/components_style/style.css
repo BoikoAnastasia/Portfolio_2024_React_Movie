@@ -10,13 +10,55 @@
 
 /* --------------------- */
 
+
+.wrapper{
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
 .postMovie {
-    display: flex;
-    flex-direction: row;
+    /* display: flex;
+    flex-direction: column;
     justify-content: space-between;
     align-items: flex-start;
-    flex-wrap: wrap;
+    flex-wrap: wrap; */
 
+}
+
+.postMovie h2{
+    margin: 10vh 0 5vh 0;
+}
+
+.movies{
+    display: flex;
+    width: 100%;
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+}
+
+.movies::-webkit-scrollbar{
+    width: 0px;
+    background: transparent;
+}
+
+.postMovie_buttons{
+    display: flex;
+    justify-content: space-between;
+}
+
+.postMovie_buttons button{
+    padding: 10px 20px;
+    background-color: transparent;
+    border: 1px solid #fff;
+    color: #fff;
+    transition: 1s;
+    cursor: pointer;
+}
+
+.postMovie_buttons button:hover, .button_nav:hover{
+    background-color: #fff;
+    color: #000;
 }
 
 .postMovie img {
@@ -87,4 +129,64 @@
 .btn_active{
     color: rgb(7, 7, 7);
     background-color: #fff;
+}
+
+/* moviePage */
+.moviePage{
+    padding: 5vh 0;
+}
+.filmInfo{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.filmInfo_poster{
+    width: 30%;
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+}
+.filmInfo_info{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.button_nav{   
+    padding: 10px 20px;
+    background-color: transparent;
+    border: 1px solid #fff;
+    color: #fff;
+    transition: 1s;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.button_watch{
+    padding: 10px 0;
+    font-weight: bold;
+    cursor: pointer;
+    transition: .5s;
+    border: 0px solid transparent;
+}
+
+.button_watch:hover{
+    background-color: transparent;
+    border: 1px solid #fff;
+    color: #fff;
+}
+
+@media only screen and (max-width: 450px) {
+    .filmInfo{
+        flex-direction: column;
+        font-size: 25px;
+    }
+    .filmInfo_poster{
+        width: 80%;
+        margin-bottom: 20px;
+    }
+    .filmInfo_info{
+        width: 80%;
+    }
 }
